@@ -1,0 +1,23 @@
+#title {
+    display: grid;
+    place-content: center;
+}
+
+#title .title h1 {
+    margin: 0;
+
+    text-align: center;
+}
+
+#title .title:hover .explode-hover .explody {
+    transform: translate(var(--translate)) rotateZ(var(--rotate));
+    transition-duration: 800ms;
+}
+
+#title .title:hover .float-hover .floaty {
+    animation: float 2s var(--floaty-delay) ease-in-out infinite alternate;
+}
+
+#title .title:hover .wave-hover .wavy {
+    animation: wave 600ms var(--wavy-delay) ease-in-out infinite alternate;
+}
