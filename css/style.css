@@ -1,120 +1,120 @@
 :root {
-    --background: #131516;
-    --text: #d8d4cf;
+  --background: #131516;
+  --text: #d8d4cf;
 }
 
 @media (prefers-color-scheme: light) {
-    :root {
-        --background: #ffffff;
-        --text: #000000;
-    }
+  :root {
+    --background: #ffffff;
+    --text: #000000;
+  }
 }
 
 .light {
-    --background: #ffffff;
-    --text: #000000;
+  --background: #ffffff;
+  --text: #000000;
 }
 
 .dark {
-    --background: #ffffff;
-    --text: #000000;
+  --background: #ffffff;
+  --text: #000000;
 }
 
 @font-face {
-    font-family: "renogare";
-    src: url("../renogare.otf");
+  font-family: "renogare";
+  src: url("../renogare.otf");
 }
 
 body {
-    margin: 0;
+  margin: 0;
 
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
 
-    font-family: "renogare";
-    background-color: var(--background);
-    color: var(--text);
+  font-family: "renogare";
+  background-color: var(--background);
+  color: var(--text);
 }
 
 article {
-    padding: 0 10vw;
+  padding: 0 10vw;
 
-    width: 100%;
-    min-height: 100vh;
+  width: 100%;
+  min-height: 100vh;
 
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 article h1 {
-    font-size: clamp(2rem, 4vw, 10rem);
+  font-size: clamp(2rem, 4vw, 10rem);
 }
 
 article h2 {
-    font-size: clamp(1.5rem, 3vw, 7rem);
+  font-size: clamp(1.5rem, 3vw, 7rem);
 }
 
 :is(.explode, .explode-hover) .explody {
-    display: inline-block;
+  display: inline-block;
 
-    will-change: transform;
-    transform: translate(0, 0) rotateZ(0);
-    transition: transform 400ms;
+  will-change: transform;
+  transform: translate(0, 0) rotateZ(0);
+  transition: transform 400ms;
 }
 
 .explode .explody {
-    transform: translate(var(--translate)) rotateZ(var(--rotate));
-    transition-duration: 800ms;
+  transform: translate(var(--translate)) rotateZ(var(--rotate));
+  transition-duration: 800ms;
 }
 
 :is(.float, .float-hover) .floaty {
-    display: inline-block;
-    will-change: transform;
+  display: inline-block;
+  will-change: transform;
 }
 
 .float .floaty {
-    animation: float 2s var(--floaty-delay) ease-in-out infinite alternate;
+  animation: float 2s var(--floaty-delay) ease-in-out infinite alternate;
 }
 
 :is(.wave, .wave-hover) .wavy {
-    display: inline-block;
-    will-change: transform;
+  display: inline-block;
+  will-change: transform;
 }
 
 .wave .wavy {
-    animation: wave 600ms var(--wavy-delay) ease-in-out infinite alternate;
+  animation: wave 600ms var(--wavy-delay) ease-in-out infinite alternate;
 }
 
 .explode-hover:hover .explody {
-    transform: translate(var(--translate)) rotateZ(var(--rotate));
-    transition-duration: 800ms;
+  transform: translate(var(--translate)) rotateZ(var(--rotate));
+  transition-duration: 800ms;
 }
 
 .float-hover:hover .floaty {
-    animation: float 2s var(--floaty-delay) ease-in-out infinite alternate;
+  animation: float 2s var(--floaty-delay) ease-in-out infinite alternate;
 }
 
 .wave-hover:hover .wavy {
-    animation: wave 600ms var(--wavy-delay) ease-in-out infinite alternate;
+  animation: wave 600ms var(--wavy-delay) ease-in-out infinite alternate;
 }
 
 @keyframes float {
-    from {
-        transform: translateY(0);
-    }
+  from {
+    transform: translateY(0);
+  }
 
-    to {
-        transform: translateY(8px);
-    }
+  to {
+    transform: translateY(8px);
+  }
 }
 
 @keyframes wave {
-    from {
-        transform: translateY(0);
-    }
+  from {
+    transform: translateY(0);
+  }
 
-    to {
-        transform: translateY(0.25em);
-    }
+  to {
+    transform: translateY(0.25em);
+  }
 }
